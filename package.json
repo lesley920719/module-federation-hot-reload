@@ -1,0 +1,19 @@
+{
+  "name": "module-federation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "main-app",
+      "component-app"
+    ]
+  },
+  "scripts": {
+    "start": "lerna run --parallel start"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
