@@ -32,7 +32,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'main_app',
       remotes: {
-        'component-app': 'component_app@http://localhost:3001/remoteEntry.js',
+        'component-app': 'component_app@http://localhost:3002/remoteEntry.js',
       },
       shared: {
         "react": {
@@ -50,10 +50,10 @@ module.exports = {
     }),
   ],
   devServer: {
-    port: 3002,
+    port: 3001,
     // 监听到文件变化时 dev-server 将会重新加载或刷新页面
     liveReload: true,
     // 监听模块联邦打包文件的变化，以实现模块联邦的热更新
-    watchFiles: [path.resolve(__dirname, '..', 'component-app/dist')]
+    watchFiles: [path.resolve(__dirname, '..', 'component-app/dist')],
   }
 };

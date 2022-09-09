@@ -2,11 +2,10 @@
   "name": "main-app",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "index.js",
   "scripts": {
-    "webpack": "webpack --watch",
-    "serve": "serve dist -p 3002",
-    "start": "webpack serve"
+    "start": "webpack serve",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +17,6 @@
     "concurrently": "7.3.0",
     "css-loader": "6.7.1",
     "html-webpack-plugin": "5.5.0",
-    "serve": "13.0.4",
     "webpack": "5.72.1",
     "webpack-cli": "4.10.0",
     "webpack-dev-server": "4.8.1"

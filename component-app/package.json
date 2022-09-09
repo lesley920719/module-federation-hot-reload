@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "webpack": "webpack --watch",
-    "serve": "serve dist -p 3001",
+    "serve": "serve dist -p 3002",
+    "webpackServe": "concurrently \"yarn serve\" \"yarn webpack\"",
     "dev": "cross-env NODE_ENV=dev webpack serve",
-    "start": "concurrently \"yarn serve\" \"yarn webpack\""
+    "start": "webpack serve",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",

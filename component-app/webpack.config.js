@@ -63,18 +63,19 @@ const config = {
     runtimeChunk: 'single',
   } : {},
   devServer: { 
-    port: 3001,
+    port: 3002,
     hot: true,
     liveReload: true,
     // needed for HMR
     devMiddleware: { 
+      // 将文件写入配置指定的磁盘位置--用于模块联邦监听文件变化
       writeToDisk: true, 
     }
   }
 };
 
 
-// 设置了ModuleFederationPlugin后，需添加optimization： { runtimeChunk: 'single' }才会热更新
+// 设置了ModuleFederationPlugin后，需添加optimization： { runtimeChunk: 'single' }本项目单独调试才会热更新
 // 本项目单独运行调试时（yarn dev）  hot reload fix
 if(devMode) {
   config.optimization = { runtimeChunk: 'single' }

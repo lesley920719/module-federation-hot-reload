@@ -1,5 +1,4 @@
-# module-federation-hot-reload
-Enabling Live Reload in Module Federated
+# main-app
 
 ## Installation
 
@@ -15,5 +14,16 @@ Run the following commands in the root directory.
 yarn start
 ```
 
-Both `main-app` and `component-app` will run in the development mode.\
+相应的联邦模块 `component-app` 也需要用以下任一命令启动
+```bash
+yarn start
+```
+
+或者 
+
+```bash
+yarn webpackServe
+```
+
+Runs the app in the development mode.\
 Paste [http://localhost:3001](http://localhost:3001) to view it in the browser.

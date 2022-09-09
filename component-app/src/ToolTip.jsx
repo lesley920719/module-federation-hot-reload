@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './tool-tip.css';
+import css from './tooltip.css';
 const styleObj = {};
 export default class ToolTip extends React.Component {
   constructor(props) {
